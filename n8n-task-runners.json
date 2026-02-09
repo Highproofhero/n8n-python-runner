@@ -6,13 +6,6 @@
         "N8N_RUNNERS_EXTERNAL_ALLOW": "*",
         "N8N_RUNNERS_STDLIB_ALLOW": "*"
       }
-    },
-    {
-      "runner-type": "javascript",
-      "env-overrides": {
-        "NODE_FUNCTION_ALLOW_EXTERNAL": "*",
-        "NODE_FUNCTION_ALLOW_BUILTIN": "*"
-      }
     }
   ]
 }
