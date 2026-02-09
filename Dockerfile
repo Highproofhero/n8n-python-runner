@@ -4,7 +4,7 @@ USER root
 
 # 1. Install libraries into the OFFICIAL Virtual Environment
 # We point directly to the venv found in the config file you discovered
-RUN cd /opt/runners/task-runner-python/.venv/bin/pip install requests
+RUN /opt/runners/task-runner-python/.venv/bin/pip install requests
 
 # 2. OVERWRITE the config with the OFFICIAL structure (but Unlocked)
 # This is the exact JSON you found, flattened into a single line for the 'echo' command.
