@@ -1,9 +1,5 @@
-# Official n8n Python Runner (Debian-based, stable)
-FROM n8nio/n8n-task-runners:python3
-
-# Install common libraries (requests, pandas, etc.)
-# Add any other libraries you need here
-RUN pip install requests
-
-# Port 5678 is the standard for runners
-EXPOSE 5678
+FROM n8nio/runners:stable
+USER root
+# Install custom packages
+RUN cd /opt/runners/task-runner-python && uv pip install numpy requests
+USER runner
