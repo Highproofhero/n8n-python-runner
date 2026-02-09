@@ -11,7 +11,7 @@ RUN cd /opt/runners/task-runner-python && \
 # 2. Patch the EXISTING config file
 # We do NOT overwrite the file. We use 'sed' to find the restrictive settings 
 # and replace them with wildcards ("*") to allow your imports.
-RUN sed -i 's/"N8N_RUNNERS_EXTERNAL_ALLOW": ""/"N8N_RUNNERS_EXTERNAL_ALLOW": "*"/g' /etc/n8n-task-runners.json && \
+RUN sed -i 's/"N8N_RUNNERS_EXTERNAL_ALLOW": ""/"N8N_RUNNERS_EXTERNAL_ALLOW": "*", "N8N_RUNNERS_HEALTH_CHECK_SERVER_HOST": "0.0.0.0"/g' /etc/n8n-task-runners.json && \
     sed -i 's/"N8N_RUNNERS_STDLIB_ALLOW": ""/"N8N_RUNNERS_STDLIB_ALLOW": "*"/g' /etc/n8n-task-runners.json && \
     sed -i 's/"NODE_FUNCTION_ALLOW_EXTERNAL": ""/"NODE_FUNCTION_ALLOW_EXTERNAL": "*"/g' /etc/n8n-task-runners.json && \
     sed -i 's/"NODE_FUNCTION_ALLOW_BUILTIN": ""/"NODE_FUNCTION_ALLOW_BUILTIN": "*"/g' /etc/n8n-task-runners.json
