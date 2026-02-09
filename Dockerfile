@@ -1,5 +1,5 @@
 # Official n8n Python Runner (Debian-based, stable)
-FROM n8nio/n8n-task-runners:latest-python
+FROM n8nio/n8n-task-runners:python3
 
 # Install common libraries (requests, pandas, etc.)
 # Add any other libraries you need here
